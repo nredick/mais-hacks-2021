@@ -1,0 +1,36 @@
+header {
+    background: #272932;
+}
+
+.head {
+    background: #272932;
+}
+
+header h2 {
+    padding: 25px;
+    text-align: center;
+    color: aliceblue;
+}
+
+body {
+    background: #E7ECEF;
+}
+
+.navbar {
+    background: #679289;
+}
+
+.navbar a {
+    color: white;
+}
+
+.img-link {
+    padding: 25px;
+}
+
+#footer {
+    margin: 5px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+}
