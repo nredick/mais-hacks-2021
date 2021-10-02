@@ -2,20 +2,20 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 #model = pickle.load(open('../model/model.pkl', 'rb'))
 
-@app.route('/')
-def home():
-    return render_template('templates/index.html')
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
-@app.route('/about')
+@app.route('/about', methods=['GET'])
 def about():
-    return render_template('templates/about.html')
+    return render_template('about.html')
 
-@app.route('/who')
+@app.route('/who', methods=['GET'])
 def who():
-    return render_template('templates/who.html')
+    return render_template('who.html')
 
 '''
 @app.route('/generate', methods=['POST'])
