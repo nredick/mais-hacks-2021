@@ -1,5 +1,7 @@
 # alex 
-.idea
+.idea/
+venv/
+.DS_Store
 
 # nathalie 
 src/venv*

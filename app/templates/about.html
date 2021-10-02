@@ -3,8 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <link href="../static/heroes.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
-    <h1>About</h1>
+<div class="head">
+            <header>
+                <h2>LSTM Poem Generator</h2>
+            </header>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">  insert picture link HOW -->
+                        Generate a poem!
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="who.html">Who we are</a>
+                        </li>
+                        </ul>
+                  </div>
+                </div>
+            </nav>
+        </div>
+<!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+        <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">  insert picture link HOW -->
+        <!-- MAIS Hacks 2021 Project
+    </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Make me a poem!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="who.html">Who we are</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<div class="px-4 py-5 my-5 text-center">
+    <!-- <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+    <h1 class="display-5 fw-bold">Project name</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">The dataset used to train the model was the Poems Dataset (NLP). The app works by using the Google Vision API to label images, and those label are used to generate a poem. The webapp was built using Flask and Bootstrap, and is hosted on an AWS EC2 t2.micro instance.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a class="btn btn-primary btn-lg px-4 gap-3" href="index.html">Show me!</a>
+          <a class="btn btn-outline-secondary btn-lg px-4" href="who.html">What geniuses designed this?</a>
+      </div>
+    </div>
+  </div>
+
+<nav class="navbar fixed-bottom navbar-expand-sm">
+            <p id="footer">
+                Created by
+                <a href="https://github.com/nredick">Nathalie</a>,
+                <a href="https://github.com/elinorpd">Elinor</a>,
+                <a href="https://github.com/allu5662">Alex</a>, &
+                <a href="https://github.com/croissantfriend">Zahur</a>. October 2021.
+            </p>
+        </nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
