@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('../model/model.pkl', 'rb'))
+#model = pickle.load(open('../model/model.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -17,9 +17,11 @@ def about():
 def who():
     return render_template('templates/who.html')
 
+'''
 @app.route('/generate', methods=['POST'])
 def generate():  # put application's code here
     return 'Hello World!'
+'''
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(port=8080, debug = True)
