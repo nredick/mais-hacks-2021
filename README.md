@@ -1,5 +1,4 @@
 # MAIS Hacks 2021 
-boop
 
 Our project aims to generate poems based on images!
 
