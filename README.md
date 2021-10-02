@@ -15,6 +15,9 @@ The dataset used to train the model was the [Poems Dataset (NLP)](https://www.ka
 - data/
   - 20k+ text files, sourced from the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset).
 
+- src/
+  - Python source code for the Google Vision API. 
+
 - model/
   - Contains Python files for the Twitter API, preprocessing data, and the script to build the model.
 
