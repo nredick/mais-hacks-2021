@@ -3,6 +3,7 @@
 
 # nathalie 
 src/venv*
+app/venv
 credentials/*
 
 -compiled / optimized / DLL files
