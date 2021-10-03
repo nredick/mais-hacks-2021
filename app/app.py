@@ -1,7 +1,5 @@
 import os
-import sys
 import csv
-import re
 import json
 import requests 
 
@@ -13,10 +11,6 @@ from google.cloud import vision
 
 # Some utilites
 import numpy as np
-from io import BytesIO
-import base64
-#from importlib.util import base64_to_pil
-from PIL import Image
 
 app = Flask(__name__, template_folder='templates')
 
