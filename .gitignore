@@ -6,6 +6,8 @@ venv/
 # nathalie 
 creds/*
 app/resources
+venv*
+
 
 -compiled / optimized / DLL files
 __pycache__/
