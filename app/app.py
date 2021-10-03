@@ -57,25 +57,6 @@ def generation():
     else:
         return '404'
     
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 '''
 @app.route('/generate', methods=['POST'])
