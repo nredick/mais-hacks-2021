@@ -5,9 +5,9 @@ venv/
 
 # nathalie 
 src/venv*
-app/venv
 credentials/*
 app/venv*
+app/resources
 
 -compiled / optimized / DLL files
 __pycache__/
