@@ -1,10 +1,81 @@
 {% extends "base.html" %} {% block content %}
 <!-- add -->
+<head>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='product.css') }}" rel="stylesheet">
+</head>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+    <div class="col-md-5 p-lg-5 mx-auto my-5"> <!-- Add background for this div? -->
+      <h1 class="display-4 fw-normal">”A picture is worth a thousand words"</h1>
+      <p class="lead fw-normal fs-2">...but what words are they?</p>
+        <p class="lead fw-normal"> <b class = "fs-3">Everyone</b> has been there: rendered speechless by surprise, stumped for inspiration with a deadline looming, or the classic “it’s….ah, how do I describe it?” From students, writers, to the visually impaired, converting visual stimuli to written art is a challenge that everyone faces in their lifetime.
+            Using machine learning, <b class = "fs-3"> MAISpeare </b> is here to solve such situations with the help of Google Vision and our own LSTM neural network to write poems for any image input!</p>
+    </div>
+  </div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-success me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center test-body overflow-hidden">
+      <div class="my-3 pt-3">
+        <h2 class="display-5">1. MAISpeare leverages Google's Vision APIto label images</h2>
+        <p class="lead">...creating a list of keywords as our "poem prompt".</p>
+      </div>
+      <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+          <img src = "https://i2.wp.com/blogs.embarcadero.com/wp-content/uploads/2021/05/mallorca-3082686.jpg?resize=750%2C549&ssl=1" class = "fitt image-fluid rounded">
+      </div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-light overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">2. MAISpeare then uses our own LSTM ML model to write poetry! </h2>
+        <a class="lead" href = "https://github.com/nredick/mais-hacks-2021" target="_blank" rel="noopener noreferrer">See the source code here!</a>
+      </div>
+      <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+          <img src = "https://smartcdn.prod.postmedia.digital/theprovince/wp-content/uploads/2017/04/poetrywordcloud.jpg" class = "fitt image-fluid rounded">
+      </div>
+    </div>
+  </div>
+
+<!--
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+    <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Another headline</h2>
+        <p class="lead">And an even wittier subheading.</p>
+      </div>
+      <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    </div>
+  </div>
+-->
+
+
 <div class="px-4 py-5 my-5 text-center">
     <!-- <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-    <h1 class="display-5 fw-bold">MAISpeare</h1>
+    <h1 class="display-5 fw-bold">So what are you waiting for?</h1>
     <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">The dataset used to train the model was the Poems Dataset (NLP). The app works by using the Google Vision API to label images, and those label are used to generate a poem. The webapp was built using Flask and Bootstrap, and is hosted on an AWS EC2 t2.micro instance.</p>
+    <!-- <p class="lead mb-4">”A picture is worth a thousand words"...but what words are they?</p> -->
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a class="btn btn-success btn-lg px-4 gap-3" href="{{ url_for('index') }}">Show me!</a>
         <a class="btn btn-outline-success btn-lg px-4" href="{{ url_for('who') }}">What geniuses designed this?</a>
