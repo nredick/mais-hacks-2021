@@ -8,6 +8,10 @@ body {
   color: #5a5a5a;
 }
 
+img.fitting{
+  height: 140px;
+  width: 140px;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
