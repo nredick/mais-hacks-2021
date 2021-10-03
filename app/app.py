@@ -1,7 +1,5 @@
 import os
-import sys
 import csv
-import re
 import json
 import requests 
 
@@ -13,12 +11,6 @@ from google.cloud import vision
 
 # Some utilites
 import numpy as np
-from io import BytesIO
-import base64
-#from importlib.util import base64_to_pil
-from PIL import Image
-
-from static.get_labels import get_labels
 
 app = Flask(__name__, template_folder='templates')
 
@@ -43,6 +35,7 @@ def who():
 def generation():
     if request.method == 'POST':
         url = request.form['input']
+            
         # Instantiates a client
         client = vision.ImageAnnotatorClient()
         image = vision.Image()
@@ -52,31 +45,18 @@ def generation():
         response = client.label_detection(image=image)
         labels = response.label_annotations     
     
-        if response.error.message:
-            return 'Error: Image not found.'
-        else:
-            d = {k : v for k, v in [[label.description, label.score] for label in labels][:3]}
+        if response.error.message: return 'Error: Image not found.'
+        else: d = {k : v for k, v in [[label.description, label.score] for label in labels][:3]}
                  
-    return ' '.join(d.keys())
+        tags = ' '.join(d.keys())
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        poem="hello world"
+        
+        return render_template('index.html', tags=f'Image tags: {tags}', poem=poem)
+    
+    else:
+        return '404'
+    
 
 '''
 @app.route('/generate', methods=['POST'])
@@ -85,4 +65,4 @@ def generate():  # put application's code here
 '''
 
 if __name__ == '__main__':
-    app.run(port=8080, debug = True)
+    app.run(host='0.0.0.0', port=8080, debug = True)
