@@ -2,13 +2,13 @@
 
 <div class="upload">
     <div class="panel">
-        <input id="file-upload" class="hidden" type="file" accept="image/png,image/gif,image/jpeg" />
+        <input id="file-upload" class="hidden" type="file" accept="image/png,image/gif,image/jpeg, ,image/jpg" />
         <label for="file-upload" id="file-drag" class="upload-box">
-            <div id="upload-caption">Drag image here or click to select from device</div>
+            <div id="upload-caption">Drag an image here or click to select from device</div>
             <img id="image-preview" class="hidden" />
         </label>
         </div>
-        <div style="margin-bottom: 2rem;">
+
         <input type="button" value="Submit" class="button" onclick="submitImage();" />
         <input type="button" value="Clear" class="button" onclick="clearImage();" />
         </div>
@@ -19,6 +19,8 @@
             <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
         </svg>
     </div>
+
+    <div id="result" class="hidden"></div>
 </div>
 
 {% endblock %}

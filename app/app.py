@@ -13,6 +13,7 @@ from PIL import Image
 
 from io import BytesIO
 import base64
+from static.get_labels import get_labels
 
 app = Flask(__name__, template_folder='templates')
 
@@ -40,10 +41,10 @@ def who():
 @app.route('/generate', methods=['GET', 'POST'])
 def predict():
     if request.method == 'POST':
+        pass
         # Get the image from post request
         img = Image.open(BytesIO(base64.b64decode(request.json)))
-        img.show()
-        #img = base64_to_pil(request.json)
+
 
     return None
 
