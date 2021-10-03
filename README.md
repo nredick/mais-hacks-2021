@@ -31,4 +31,4 @@ The dataset used to train the model was the [Poems Dataset (NLP)](https://www.ka
 
 ### A screenshot of our webapp generated poem with [this image](https://webstockreview.net/images/cheese-clipart-yellow-cheese-21.jpg) submitted
 
-![Demo of our web app displaying a poem about Gruyere cheese.](https://github.com/nredick/mais-hacks-2021/blob/main/Gruyere_poem.png)
+![Demo of our web app displaying a poem about Gruyere cheese.](https://github.com/nredick/mais-hacks-2021/blob/main/sample_images/Gruyere_poem.png)
