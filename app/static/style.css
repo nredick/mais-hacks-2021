@@ -38,6 +38,7 @@ body {
 
 .navbar {
     background: var(--accent);
+    font-size: 22px;
 }
 
 .navbar-brand a {
@@ -48,9 +49,16 @@ body {
     padding: 25px;
 }
 
+
 .poetry {
     font-size: 16px;
     padding: 25px;
+
+#footer {
+    margin: 5px;
+    color: #000;
+    font-size: 16px;
+
     text-align: center;
     justify-content: center; 
 }
@@ -80,9 +88,4 @@ body {
 #url {
     text-align: center;
     width: 25%;
-}
-
-.form-group {
-    text-align: center;
-    justify-content: center;
 }
