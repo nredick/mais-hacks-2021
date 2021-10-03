@@ -1,18 +1,23 @@
 import os
 import sys
 import csv
+import re
+import json
+import requests 
 
 # Flask
 from flask import Flask, redirect, url_for, request, render_template, Response, jsonify, redirect
 from werkzeug.utils import secure_filename
 
+from google.cloud import vision
+
 # Some utilites
 import numpy as np
-#from util import base64_to_pil
-from PIL import Image
-
 from io import BytesIO
 import base64
+#from importlib.util import base64_to_pil
+from PIL import Image
+
 from static.get_labels import get_labels
 
 app = Flask(__name__, template_folder='templates')
@@ -32,22 +37,32 @@ def who():
     return render_template('who.html')
 
 
+## url 
 
-
-
-
-## image upload 
-
-@app.route('/generate', methods=['GET', 'POST'])
-def predict():
+@app.route('/generation', methods=['POST', 'GET'])
+def generation():
     if request.method == 'POST':
-        pass
-        # Get the image from post request
-        img = Image.open(BytesIO(base64.b64decode(request.json)))
-        labels = get_labels(img)
-        print(labels)
+        url = request.form['input']
+        # Instantiates a client
+        client = vision.ImageAnnotatorClient()
+        image = vision.Image()
+        image.source.image_uri = url
 
-    return None
+        # Performs label detection on the image file    
+        response = client.label_detection(image=image)
+        labels = response.label_annotations     
+    
+        if response.error.message:
+            return 'Error: Image not found.'
+        else:
+            d = {k : v for k, v in [[label.description, label.score] for label in labels][:3]}
+                 
+    return ' '.join(d.keys())
+        
+
+
+
+
 
 
 

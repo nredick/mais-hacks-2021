@@ -4,7 +4,7 @@ venv/
 .DS_Store
 
 # nathalie 
-credentials/*
+creds/*
 app/resources
 
 -compiled / optimized / DLL files
