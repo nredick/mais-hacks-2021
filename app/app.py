@@ -50,9 +50,9 @@ def generation():
                  
         tags = ' '.join(d.keys())
         
-        poem="hello world"
+        poem=""
         
-        return render_template('index.html', tags=f'Image tags: {tags}', poem=poem)
+        return render_template('index.html', poem=poem)
     
     else:
         return '404'
