@@ -1,8 +1,6 @@
-# MAIS Hacks 2021 
+# MAIS Hacks 2021 - Winner of the Best Hack for Art
 
 Our project aims to generate poems based on images!
-
-Check out the model [here](http://192.168.0.53:8080)!
 
 This project was built for [MAIS Hacks 2021](https://maishacks.com/), a 24 HR virtual AI hackathon. Our goal was to build a model that can generate poems based on input. 
 
