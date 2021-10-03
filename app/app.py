@@ -7,10 +7,14 @@ import requests
 from flask import Flask, redirect, url_for, request, render_template, Response, jsonify, redirect
 from werkzeug.utils import secure_filename
 
+# google vision api 
 from google.cloud import vision
 
 # Some utilites
 import numpy as np
+
+# our lstm 
+from model import pred_poem
 
 app = Flask(__name__, template_folder='templates')
 
@@ -50,19 +54,14 @@ def generation():
                  
         tags = ' '.join(d.keys())
         
-        poem=""
+        poem=pred_poem(tags.capitalize())
         
         return render_template('index.html', poem=poem)
     
     else:
         return '404'
     
-
-'''
-@app.route('/generate', methods=['POST'])
-def generate():  # put application's code here
-    return 'Hello World!'
-'''
+    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug = True)
