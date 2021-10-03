@@ -10,7 +10,7 @@ Project made with love by [Nathalie](https://github.com/nredick), [Elinor](https
 
 The dataset used to train the model was the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset). The app works by using the Google Vision API to label images, and those labels are used to generate a poem. The webapp was built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Bootstrap](https://getbootstrap.com/), and is hosted on an AWS EC2 t2.micro instance.
 
-## Repository Organization
+<!--## Repository Organization
 
 - data/
   - 20k+ text files, sourced from the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset).
@@ -23,3 +23,4 @@ The dataset used to train the model was the [Poems Dataset (NLP)](https://www.ka
 
 - ./ 
   - A requirements.txt file and .gitignore. 
+-->
