@@ -18,8 +18,6 @@ import base64
 #from importlib.util import base64_to_pil
 from PIL import Image
 
-from static.get_labels import get_labels
-
 app = Flask(__name__, template_folder='templates')
 
 #model = pickle.load(open('../model/model.pkl', 'rb'))
@@ -43,6 +41,7 @@ def who():
 def generation():
     if request.method == 'POST':
         url = request.form['input']
+            
         # Instantiates a client
         client = vision.ImageAnnotatorClient()
         image = vision.Image()
@@ -52,12 +51,18 @@ def generation():
         response = client.label_detection(image=image)
         labels = response.label_annotations     
     
-        if response.error.message:
-            return 'Error: Image not found.'
-        else:
-            d = {k : v for k, v in [[label.description, label.score] for label in labels][:3]}
+        if response.error.message: return 'Error: Image not found.'
+        else: d = {k : v for k, v in [[label.description, label.score] for label in labels][:3]}
                  
-    return ' '.join(d.keys())
+        tags = ' '.join(d.keys())
+        
+        poem="hello world"
+        
+        return render_template('index.html', tags=f'Image tags: {tags}', poem=poem)
+    
+    else:
+        return '404'
+    
         
 
 

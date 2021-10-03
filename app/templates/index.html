@@ -1,44 +1,23 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="upload">
-    <form action="/generation" method="post" class="jumbotron" id="jbg">
-        <div class="form-group blue-border-focus">
-            <label><b>Link</b></label>
-            <input name="input" type="text" class="form-control" placeholder="ex. https://google.com/image">
-            <small class="form-text">Paste a url to an image</small>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+<div>
+    <div class="upload">
+        <form action="/generation" method="post" class="jumbotron" id="jbg">
+            <div class="form-group blue-border-focus">
+                <label style="margin: 25px;"><b><h1>Link</h1></b></label>
+                <input style="margin-bottom: 0px;" name="input" id="url" type="text" class="form-control position-relative start-50 translate-middle" placeholder="ex. https://google.com/image">
+                <small style="margin-top: 5px;" class="form-text">Paste a url to an image</small>
+            </div>
+            <button type="submit" class="btn btn-outline-success btn-lg px-4">Submit</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <p id="poetry" class="poetry row">{{ tags }}</p>
+        <p id="poem" class="poetry row">{{ poem }}</p>
+    </div>
+
+    
 </div>
-
-<!--<div class="container">
-    <div class="upload row">
-        <div class="panel">
-            <input id="file-upload" class="hidden" type="file" accept="image/png,image/gif,image/jpeg, ,image/jpg" />
-            <label for="file-upload" id="file-drag" class="upload-box">
-                <div id="upload-caption">Drag an image here or click to select from device</div>
-                <img id="image-preview" class="hidden" style='height: 100%; width: 100%; object-fit: contain' />
-            </label>
-        </div>
-    </div>
-
-    <div style="text-align: center;">
-        <input type="button" value="Submit" class="btn btn-success btn-lg px-4 gap-3" onclick="submitImage();" />
-        <input type="button" value="Clear" class="btn btn-outline-success btn-lg px-4" onclick="clearImage();" />
-        <!-- "Clear" is a little hard to see -->
-    </div>
-
-        
-    <div class="row">
-        <div id="image-box" class="col-lg-6">
-            <img id="image-display"/>
-            <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
-                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-            </svg>
-        </div>
-
-        <div id="result" class="hidden col-lg-6"></div>
-    </div>
-</div>-->
 
 {% endblock %}

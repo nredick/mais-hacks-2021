@@ -56,7 +56,8 @@ function submitImage() {
   imageDisplay.classList.add("loading");
 
   // call the predict function of the backend
-  predictImage(imageDisplay.src);
+  //predictImage(imageDisplay.src);
+  displayImage(imageDisplay.src, 'image-display');
 }
 
 function clearImage() {
