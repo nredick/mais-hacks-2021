@@ -8,18 +8,18 @@ Project made with love by [Nathalie](https://github.com/nredick), [Elinor](https
 
 ## Project Description
 
-The dataset used to train the model was the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset). The app works by using the Google Vision API to label images, and those labels are used to generate a poem. The webapp was built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Bootstrap](https://getbootstrap.com/), and is hosted on an AWS EC2 t2.micro instance.
+The dataset used to train the model was the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset). The app works by using the Google Vision API to label images, and those labels are used to generate a poem. The poetry generator was built using a tensorflow LSTM. The webapp was built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Bootstrap](https://getbootstrap.com/), and is hosted on an AWS EC2 t2.micro instance.
 
 <!--## Repository Organization
 
 - data/
-  - 20k+ text files, sourced from the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset).
+  - 20k+ text files, sourced from the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset). Only files used to generate the training data are present in the repository.
 
 - src/
   - Python source code for the Google Vision API. 
 
 - model/
-  - Contains Python files for the Twitter API, preprocessing data, and the script to build the model.
+  - Contains Python files for the Twitter API, preprocessing data, and the script to build the model. Also includes pickled model and tokenizer for the poetry generator.
 
 - ./ 
   - A requirements.txt file and .gitignore. 
