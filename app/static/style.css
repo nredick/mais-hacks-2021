@@ -80,8 +80,9 @@ body {
     padding: 0.5rem 1.2rem;
     border-radius: 2px;
     font-size: 1rem;
-    min-width: 6rem;
-  }
+    width: 6rem;
+    justify-self: center;
+}
   
   .button:hover {
     background-color: var(--accent);
@@ -126,8 +127,8 @@ body {
     font-size: 16px;
     color: #666666;
     cursor: pointer;
-    width: 24rem;
-    height: 16rem;
+    width: 450px;
+    height: 300px;
     background: #fff;
     border: 0.1rem dashed #838388;
     align-items: center;
@@ -149,14 +150,21 @@ body {
   }
   
   .upload-box #image-preview {
-    max-width: 24rem;
-    max-height: 14rem;
+    width: 400px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
   }
   
   #image-result {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-height: 20rem;
+    width: 400px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
   }
   
   #image-box {
@@ -168,7 +176,8 @@ body {
   
   #image-display {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-height: 20rem;
+    max-height: 400px;
+    margin: 100px;
   }
   
   #image-display.loading {

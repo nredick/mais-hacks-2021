@@ -44,7 +44,8 @@ def predict():
         pass
         # Get the image from post request
         img = Image.open(BytesIO(base64.b64decode(request.json)))
-
+        labels = get_labels(img)
+        print(labels)
 
     return None
 
