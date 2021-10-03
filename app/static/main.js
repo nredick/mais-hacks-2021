@@ -35,7 +35,7 @@ function fileSelectHandler(e) {
 var imagePreview = document.getElementById("image-preview");
 var imageDisplay = document.getElementById("image-display");
 var uploadCaption = document.getElementById("upload-caption");
-var predResult = document.getElementById("pred-result");
+var result = document.getElementById("result");
 var loader = document.getElementById("loader");
 
 //========================================================================
@@ -45,6 +45,7 @@ var loader = document.getElementById("loader");
 function submitImage() {
   // action for the submit button
   console.log("submit");
+  // print(imageDisplay.src)
 
   if (!imageDisplay.src || !imageDisplay.src.startsWith("data")) {
     window.alert("Please select an image before submit.");
@@ -65,12 +66,12 @@ function clearImage() {
   // remove image sources and hide them
   imagePreview.src = "";
   imageDisplay.src = "";
-  predResult.innerHTML = "";
+  result.innerHTML = "";
 
   hide(imagePreview);
   hide(imageDisplay);
   hide(loader);
-  hide(predResult);
+  hide(result);
   show(uploadCaption);
 
   imageDisplay.classList.remove("loading");
@@ -90,7 +91,7 @@ function previewFile(file) {
     hide(uploadCaption);
 
     // reset
-    predResult.innerHTML = "";
+    result.innerHTML = "";
     imageDisplay.classList.remove("loading");
 
     displayImage(reader.result, "image-display");
@@ -102,7 +103,7 @@ function previewFile(file) {
 //========================================================================
 
 function predictImage(image) {
-  fetch("/predict", {
+  fetch("/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -132,8 +133,8 @@ function displayResult(data) {
   // display the result
   imageDisplay.classList.remove("loading");
   hide(loader);
-  predResult.innerHTML = data.result;
-  show(predResult);
+  result.innerHTML = data.result;
+  show(result);
 }
 
 function hide(el) {
