@@ -1,2 +1,0 @@
-Guava tree can never produce apple
-And for apple tree producing guava is impossible.
