@@ -9,6 +9,7 @@ import random
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
+import pickle
 
 # Flask
 from flask import Flask, redirect, url_for, request, render_template, Response, jsonify, redirect
@@ -64,9 +65,9 @@ def generation():
     
 
 ## our lstm ## 
-saved_model_path = 'model/'
+saved_model_path = '../model/'
 loaded_model = tf.keras.models.load_model(saved_model_path)
-tokenizer = pickle.load(open('model/tokenizer.pkl','rb'))
+tokenizer = pickle.load(open('../model/tokenizer.pkl','rb'))
 max_sequence_len=50
 
 def line_breaker(s):
