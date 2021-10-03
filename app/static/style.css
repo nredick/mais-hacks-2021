@@ -36,11 +36,6 @@ body {
     min-height: 900px;
 }
 
-.container {
-    white-space: pre-line;
-    text-align: center;
-}
-
 .navbar {
     background: var(--accent);
     font-size: 22px;
