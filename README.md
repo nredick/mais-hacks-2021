@@ -10,7 +10,7 @@ Project made with love by [Nathalie](https://github.com/nredick), [Elinor](https
 
 ## Project Description
 
-The dataset used to train the model was the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset). The app works by using the Google Vision API to label images, and those labels are used to generate a poem. The poetry generator was built using a tensorflow LSTM. The webapp was built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Bootstrap](https://getbootstrap.com/), and is hosted on an AWS EC2 t2.micro instance.
+The dataset used to train the model was the [Poems Dataset (NLP)](https://www.kaggle.com/michaelarman/poemsdataset). The app works by using the Google Vision API to label images, and those labels are used to generate a poem. The poetry generator was built using a tensorflow LSTM. The webapp was built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Bootstrap](https://getbootstrap.com/).
 
 ## Repository Organization
 
