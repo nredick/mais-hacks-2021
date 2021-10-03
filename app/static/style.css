@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+:root {
+    --accent: #679289;
+    --header: #272932; 
+  }
 
 header {
     font-family: 'Indie Flower', cursive;
     font-size: 50px;
-    background: #272932;
+    background: var(--header);
 }
 
 .head {
-    background: #272932;
+    background: var(--header);
 }
 
 header h2 {
@@ -29,7 +33,7 @@ body {
 }
 
 .navbar {
-    background: #679289;
+    background: var(--accent);
 }
 
 .navbar a {
@@ -72,7 +76,7 @@ body {
     text-decoration: none;
     outline: none;
     color: #ffffff;
-    background-color: rgb(0, 120, 212);
+    background-color: var(--accent);
     padding: 0.5rem 1.2rem;
     border-radius: 2px;
     font-size: 1rem;
@@ -80,7 +84,7 @@ body {
   }
   
   .button:hover {
-    background-color: rgb(16, 110, 190);
+    background-color: var(--accent);
   }
   
   .button.disabled {
@@ -118,35 +122,35 @@ body {
   
   /* Upload box */
   .upload-box {
-    font-size: 0.8rem;
+    padding: 10px;
+    font-size: 16px;
     color: #666666;
     cursor: pointer;
-    width: 16rem;
-    height: 10rem;
+    width: 24rem;
+    height: 16rem;
     background: #fff;
     border: 0.1rem dashed #838388;
-    border-radius: 0.4rem;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    border-radius: 0.4rem;
     margin: 1rem 0 2rem 0;
   }
   
   .upload-box.dragover {
     /* background-color: grey; */
     color: #eeeeee;
-    border: 0.1rem solid rgb(0, 120, 212);
-    box-shadow: inset 0 0 0 0.1rem rgb(0, 120, 212);
+    border: 0.1rem solid var(--accent);
+    box-shadow: inset 0 0 0 0.1rem var(--accent);
   }
   
   .upload-box:hover {
-    border-color: rgb(0, 120, 212);
+    border-color: var(--accent);
   }
   
   .upload-box #image-preview {
-    max-width: 14rem;
-    max-height: 8rem;
+    max-width: 24rem;
+    max-height: 14rem;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
   }
   
@@ -171,7 +175,7 @@ body {
     filter: brightness(30%);
   }
   
-  #pred-result {
+  #result {
     color: white;
     font-size: 1.5rem;
     position: absolute;
