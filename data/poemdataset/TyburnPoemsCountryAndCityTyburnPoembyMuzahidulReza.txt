@@ -1,6 +1,0 @@
-Country
-Stilly
-City
-Noisy;
-Country is stilly and natural
-Noisy city is artificial.
