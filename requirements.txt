@@ -7,7 +7,6 @@ aiohttp==3.7.4.post0
 asgiref==3.4.1
 beautifulsoup4==4.10.0
 blinker==1.4
-cElementTree==1.0.2-20050302
 contextvars==2.4
 coverage==6.0
 dataclasses==0.8
