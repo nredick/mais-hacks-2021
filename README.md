@@ -2,6 +2,8 @@
 
 Our project aims to generate poems based on images!
 
+Check out the model [here](http://192.168.0.53:8080)!
+
 This project was built for [MAIS Hacks 2021](https://maishacks.com/), a 24 HR virtual AI hackathon. Our goal was to build a model that can generate poems based on input. 
 
 Project made with love by [Nathalie](https://github.com/nredick), [Elinor](https://github.com/elinorpd), [Alex](https://github.com/allu5662), and [Zahur](https://github.com/croissantfriend).
