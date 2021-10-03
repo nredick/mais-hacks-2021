@@ -48,7 +48,7 @@ function submitImage() {
   // print(imageDisplay.src)
 
   if (!imageDisplay.src || !imageDisplay.src.startsWith("data")) {
-    window.alert("Please select an image before submit.");
+    window.alert("Please select an image before submitting.");
     return;
   }
 
@@ -86,7 +86,6 @@ function previewFile(file) {
   reader.readAsDataURL(file);
   reader.onloadend = () => {
     imagePreview.src = URL.createObjectURL(file);
-
     show(imagePreview);
     hide(uploadCaption);
 

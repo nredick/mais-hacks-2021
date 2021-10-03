@@ -7,7 +7,7 @@
 
 header {
     font-family: 'Indie Flower', cursive;
-    font-size: 50px;
+    font-size: 60px;
     background: var(--header);
 }
 
@@ -16,6 +16,7 @@ header {
 }
 
 header h2 {
+    font-size: 45px;
     padding: 25px;
     text-align: center;
     color: aliceblue;
@@ -34,6 +35,7 @@ body {
 
 .navbar {
     background: var(--accent);
+    font-size: 22px;
 }
 
 .navbar a {
@@ -47,7 +49,7 @@ body {
 #footer {
     margin: 5px;
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -124,7 +126,7 @@ body {
   /* Upload box */
   .upload-box {
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
     color: #666666;
     cursor: pointer;
     width: 450px;

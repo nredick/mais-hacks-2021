@@ -17,14 +17,15 @@
             <input id="file-upload" class="hidden" type="file" accept="image/png,image/gif,image/jpeg, ,image/jpg" />
             <label for="file-upload" id="file-drag" class="upload-box">
                 <div id="upload-caption">Drag an image here or click to select from device</div>
-                <img id="image-preview" class="hidden" />
+                <img id="image-preview" class="hidden" style='height: 100%; width: 100%; object-fit: contain' />
             </label>
         </div>
     </div>
 
     <div style="text-align: center;">
-        <input type="button" value="Submit" class="button" onclick="submitImage();" />
-        <input type="button" value="Clear" class="button" onclick="clearImage();" />
+        <input type="button" value="Submit" class="btn btn-success btn-lg px-4 gap-3" onclick="submitImage();" />
+        <input type="button" value="Clear" class="btn btn-outline-success btn-lg px-4" onclick="clearImage();" />
+        <!-- "Clear" is a little hard to see -->
     </div>
 
         

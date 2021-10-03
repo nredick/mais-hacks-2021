@@ -1,13 +1,14 @@
 {% extends "base.html" %} {% block content %}
-
+<!-- add -->
 <div class="px-4 py-5 my-5 text-center">
     <!-- <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-    <h1 class="display-5 fw-bold">Project name</h1>
+    <h1 class="display-5 fw-bold">MAISpeare</h1>
     <div class="col-lg-6 mx-auto">
     <p class="lead mb-4">The dataset used to train the model was the Poems Dataset (NLP). The app works by using the Google Vision API to label images, and those label are used to generate a poem. The webapp was built using Flask and Bootstrap, and is hosted on an AWS EC2 t2.micro instance.</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a class="btn btn-primary btn-lg px-4 gap-3" href="{{ url_for('index') }}">Show me!</a>
-        <a class="btn btn-outline-secondary btn-lg px-4" href="{{ url_for('who') }}">What geniuses designed this?</a>
+        <a class="btn btn-success btn-lg px-4 gap-3" href="{{ url_for('index') }}">Show me!</a>
+        <a class="btn btn-outline-success btn-lg px-4" href="{{ url_for('who') }}">What geniuses designed this?</a>
+        <!-- 2nd button is a little hard to see -->
     </div>
     </div>
 </div>
