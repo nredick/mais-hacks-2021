@@ -14,6 +14,7 @@ import pickle
 # Flask
 from flask import Flask, redirect, url_for, request, render_template, Response, jsonify, redirect
 from werkzeug.utils import secure_filename
+from gevent.pywsgi import WSGIServer
 
 # google vision api 
 from google.cloud import vision
@@ -115,4 +116,9 @@ def pred_poem(seed_text, next_words=30, incl_title=True,):
     
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug = True)
+    #app.run(host='0.0.0.0', port=8080, debug = True)
+
+    # Serve the app with gevent
+    http_server = WSGIServer(('0.0.0.0', 5000), app)
+    print('WSGI serving at http://127.0.0.1:5000/')
+    http_server.serve_forever()

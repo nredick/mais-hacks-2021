@@ -5,7 +5,6 @@ cffi==1.14.6
 unicodedata2==13.0.0.post2
 aiohttp==3.7.4.post0
 asgiref==3.4.1
-BeautifulSoup==3.2.2
 beautifulsoup4==4.10.0
 blinker==1.4
 cElementTree==1.0.2-20050302
