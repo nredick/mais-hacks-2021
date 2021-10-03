@@ -16,6 +16,12 @@ body {
     background: #E7ECEF;
 }
 
+body {
+    background-image: url("resources/books.png");
+    background-size: cover;
+    min-height: 900px;
+}
+
 .navbar {
     background: #679289;
 }
