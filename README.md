@@ -1,4 +1,4 @@
-# MAIS Hacks 2021 - Winner of the Best Hack for Art
+# MAIS Hacks 2021 - Winner of the Best AI Hack for Art
 
 Our project aims to generate poems based on images!
 
