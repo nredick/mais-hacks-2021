@@ -1,4 +1,4 @@
-# MAIS Hacks 2021 - Winner of the Best AI Hack for Art
+# MAISpeare - Winner of the Best AI Hack for Art (MAIS Hacks 2021)
 
 Our project aims to generate poems based on images!
 
