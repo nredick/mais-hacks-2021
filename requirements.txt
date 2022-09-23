@@ -42,7 +42,7 @@ packaging==21.0
 Pillow==8.3.2
 pipreqs==0.4.10
 proto-plus==1.19.2
-protobuf==3.18.0
+protobuf==3.18.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
