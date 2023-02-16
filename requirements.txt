@@ -64,7 +64,7 @@ tornado==6.1
 typing-extensions==3.7.4.3
 unicodedata2==13.0.0.post2
 urllib3==1.26.7
-Werkzeug==2.0.1
+Werkzeug==2.2.3
 wrapt==1.12.1
 yarg==0.1.9
 zipp==3.6.0
